@@ -1,4 +1,4 @@
-import 'package:animes_app/features/start/UI/screens/widgets/splash_body.dart';
+import 'package:animes_app/features/splash/UI/screens/widgets/splash_body.dart';
 import 'package:flutter/material.dart';
 
 class SplashScreen extends StatelessWidget {

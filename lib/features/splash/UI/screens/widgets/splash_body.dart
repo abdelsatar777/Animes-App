@@ -22,7 +22,9 @@ class _SplashBodyState extends State<SplashBody>
     animationController.forward();
     Future.delayed(
       Duration(seconds: 4),
-      () => Navigator.pushNamed(context, "start_screen"),
+      () {
+        return Navigator.pushNamed(context, "home_page_wrapper");
+      },
     );
     super.initState();
   }
