@@ -3,7 +3,9 @@ import 'package:animes_app/core/resource/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class DetailAnimeCard extends StatelessWidget {
-  const DetailAnimeCard({super.key});
+  final String imgPath;
+
+  const DetailAnimeCard({super.key, required this.imgPath});
 
   @override
   Widget build(BuildContext context) {
@@ -14,8 +16,10 @@ class DetailAnimeCard extends StatelessWidget {
           height: 400,
           decoration: BoxDecoration(
             image: DecorationImage(
-              image: AssetImage(AppAssets.wallpaperImage),
+              image: NetworkImage(imgPath),
               fit: BoxFit.cover,
+              onError: (_, __) =>
+                  AssetImage(AppAssets.defaultImage) as ImageProvider,
             ),
           ),
           child: Container(

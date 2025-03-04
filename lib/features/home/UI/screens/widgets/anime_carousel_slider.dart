@@ -1,9 +1,9 @@
-import 'package:animes_app/features/home/UI/manager/best_anime_cubit.dart';
-import 'package:animes_app/features/home/UI/manager/best_anime_state.dart';
+import 'package:animes_app/features/home/UI/manager/best%20anime/best_anime_cubit.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../manager/best anime/best_anime_state.dart';
 import 'carousel_card.dart';
 
 class AnimeCarouselSlider extends StatelessWidget {

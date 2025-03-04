@@ -1,6 +1,7 @@
-import 'package:animes_app/features/home/UI/manager/best_anime_state.dart';
 import 'package:animes_app/features/home/data/repo/home_repo.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
+import 'best_anime_state.dart';
 
 class BestAnimeCubit extends Cubit<BestAnimeState> {
   final HomeRepo homeRepo;

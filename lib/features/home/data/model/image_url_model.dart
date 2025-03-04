@@ -4,8 +4,6 @@ class ImageUrlModel {
   ImageUrlModel({required this.imageUrl});
 
   factory ImageUrlModel.fromJson(Map<String, dynamic> json) {
-    return ImageUrlModel(
-      imageUrl: json["jpg"]["large_image_url"] ?? "No Url",
-    );
+    return ImageUrlModel(imageUrl: json["jpg"]["image_url"] ?? "");
   }
 }
