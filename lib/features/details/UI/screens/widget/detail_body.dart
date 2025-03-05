@@ -61,26 +61,31 @@ class _DetailBodyState extends State<DetailBody> {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    state.details.title,
-                                    style: const TextStyle(
-                                      fontSize: 30,
-                                      fontWeight: FontWeight.bold,
-                                      color: Colors.white,
+                              Expanded(
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      state.details.title,
+                                      style: const TextStyle(
+                                        fontSize: 30,
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.white,
+                                      ),
+                                      maxLines: 1,
+                                      overflow: TextOverflow
+                                          .ellipsis, // يقطع النص عند تجاوز الحد
                                     ),
-                                  ),
-                                  const SizedBox(width: 7),
-                                  Text(
-                                    state.details.year,
-                                    style: const TextStyle(
-                                      fontSize: 18,
-                                      color: Colors.grey,
+                                    const SizedBox(height: 7),
+                                    Text(
+                                      state.details.year,
+                                      style: const TextStyle(
+                                        fontSize: 18,
+                                        color: Colors.grey,
+                                      ),
                                     ),
-                                  ),
-                                ],
+                                  ],
+                                ),
                               ),
                               Row(
                                 children: [
@@ -116,7 +121,8 @@ class _DetailBodyState extends State<DetailBody> {
                   ),
                   // قائمة StaffList
                   const SliverToBoxAdapter(child: StaffList()),
-                  const SliverToBoxAdapter(child: SizedBox(height: 100)), // تباعد لضمان عدم تغطية المحتوى
+                  const SliverToBoxAdapter(child: SizedBox(height: 100)),
+                  // تباعد لضمان عدم تغطية المحتوى
                 ],
               ),
 
@@ -140,5 +146,4 @@ class _DetailBodyState extends State<DetailBody> {
       },
     );
   }
-
 }

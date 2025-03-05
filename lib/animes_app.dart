@@ -3,7 +3,6 @@ import 'package:animes_app/features/details/UI/manager/Staff/staff_cubit.dart';
 import 'package:animes_app/features/details/data/repo/details_repo_impl.dart';
 import 'package:animes_app/features/genres/UI/manager/genres_cubit.dart';
 import 'package:animes_app/features/home/UI/manager/anime/anime_cubit.dart';
-import 'package:animes_app/features/home/UI/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'core/network/di.dart';
@@ -13,6 +12,7 @@ import 'features/genres/data/repo/genres_repo_impl.dart';
 import 'features/home/UI/manager/best anime/best_anime_cubit.dart';
 import 'features/home/UI/screens/home_page_wrapper.dart';
 import 'features/home/data/repo/home_repo_impl.dart';
+import 'features/splash/UI/screens/splash_screen.dart';
 
 class AnimesApp extends StatelessWidget {
   const AnimesApp({super.key});
@@ -54,7 +54,7 @@ class AnimesApp extends StatelessWidget {
         theme: ThemeData.dark().copyWith(
           scaffoldBackgroundColor: AppColors.primaryColor,
         ),
-        home: HomeScreen(),
+        home: SplashScreen(),
       ),
     );
   }
